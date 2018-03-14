@@ -1,0 +1,40 @@
+<h1><%= @restaurant.name %></h1>
+<table>
+
+  <tr>
+    <td><h3> Address: </h3></td>
+    <td><p> <%= @restaurant.address%> </p></td>
+  </tr>
+
+  <tr>
+    <td><h3> Phone Number: </h3></td>
+    <td><p> <%= @restaurant.phone_number%> </p></td>
+  </tr>
+
+  <tr>
+   <td><h3> Category: </h3></td>
+    <td><p> <%= @restaurant.category%> </p></td>
+  </tr>
+
+  <tr>
+   <td><h3> Reviews: </h3></td>
+    <td> <p>
+      <% @restaurant.reviews.each do |review| %>
+      <%= review.content %>
+      <%= review.rating %>
+      <% end %></p>
+    </td>
+  </tr>
+
+
+</table>
+
+<br>
+
+<%= link_to "Back to the list", restaurants_path %>
+
+<br>
+  <%= link_to "Edit", edit_restaurant_path(@restaurant) %>
+
+<br>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>

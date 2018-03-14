@@ -1,0 +1,12 @@
+<%= form_for @restaurant, class: "form-inline" do |r| %>
+  <%= r.label :name, 'enter the name of the restaurant' %>
+  <%= r.text_field :name %>
+  <%= r.label :address, 'enter an address' %>
+  <%= r.text_field :address %>
+  <%= r.label :phone_number, 'Enter the phone_number' %>
+  <%= r.text_field :phone_number %>
+  <%= r.label :category, 'Enter a category' %>
+  <%= r.text_field :category %>
+  <%= r.submit "submit", class: "btn btn-primary" %>
+
+<% end %>
